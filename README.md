@@ -8,6 +8,7 @@ Downloading following packages:
 
 ```
 pip install google-api-python-client
+pip install tqdm
 ```
 
 
@@ -27,11 +28,14 @@ Then you can get your access token in Step 2 after logging in your account. Reme
 * **Note**: the access token will expire in `3600s`, so if your file is ultra big, you need to get your access token for many times. If you want to get access token automatically, you need to apply API from Google Cloud, this is much more complex, and this takes a much slower speed when downloading.
 
 
-Finally you can download automatically by replacing information in script `auto_download.py`, that is your `ACCESS_TOKEN`, `FOLDER_ID` and `OUTPUT_PATH`, `OUTPUT_PATH` is the root of your download.
+Finally you can download automatically by replacing information in script `auto_download_folder.py`, that is your `ACCESS_TOKEN`, `FOLDER_ID` and `OUTPUT_PATH`, `OUTPUT_PATH` is the root of your download.
 
 ```python
 ACCESS_TOKEN = "YOUR_ACCESSS_TOKEN"
 FOLDER_ID = "YOUR_FOLDER_ID"
 OUTPUT_PATH = "/path/to/output/root"
 ```
+
+
+If you want to obtain a single file, run `auto_download_file.py` instead. The way to obtain `FILE_ID` is very similar to `FOLDER_ID`. For instance, if the share link is https://drive.google.com/file/d/1kappILSn-kzBxja9GPw1d4GrzxFTl9rD/view?usp=drive_link, then the `FOLDER_ID` is `1kappILSn-kzBxja9GPw1d4GrzxFTl9rD`.
   
